@@ -13,9 +13,12 @@ var models = require('../models');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+// From original code:
+// var port = normalizePort(process.env.PORT || '3000');
+// app.set('port', port);
 
+// From the tutorial:
+app.set('port', process.env.PORT || 3000);
 
 /**
  * Configure sequelize.
